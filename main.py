@@ -11,7 +11,7 @@ app = Flask(__name__)
 def qr():
     msg = request.args.get('msg')
     if not msg:
-        return "Ошибка: укажите параметр msg (например, /qr?msg=Hello)", 400
+        return "Ошибка: укажите параметр test (например, /qr?msg=Hello)", 400
     img = qrcode.make(msg)
     
     buffer = BytesIO()
